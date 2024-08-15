@@ -7,7 +7,8 @@ return {
   opts = {
     options = {
       -- theme = "gruvbox"
-      theme = "github_light"
+      -- theme = "github_light"
+      theme = "everforest"
     }
   }
 }
