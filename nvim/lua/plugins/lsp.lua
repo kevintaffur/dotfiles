@@ -18,6 +18,9 @@ return {
         "cssls",
         "ruby_lsp",
         "gopls",
+        "tailwindcss",
+        "volar",
+        "elixirls",
       }
     },
   },
@@ -65,6 +68,14 @@ return {
       })
 
       lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.volar.setup({
         capabilities = capabilities,
       })
 

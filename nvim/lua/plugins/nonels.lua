@@ -1,22 +1,36 @@
 return {
-  "nvimtools/none-ls.nvim",
-  config = function()
-    local null_ls = require("null-ls")
-    null_ls.setup({
-      sources = {
-        -- Lua
-        null_ls.builtins.formatting.stylua,
-        -- Js
-        null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.formatting.prettier,
-        -- Python
-        null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.isort,
-        -- Golang
-        null_ls.builtins.formatting.goimports,
-      },
-    })
+	"nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
+	config = function()
+		local null_ls = require("null-ls")
 
-    vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format, {})
-  end,
+		-- local null_ls_utils = require("null-ls.utils")
+		-- local cmd_resolver = require("null-ls.helpers.command_resolver")
+
+		local formatting = null_ls.builtins.formatting
+		-- local diagnostics = null_ls.builtins.diagnostics
+
+		null_ls.setup({
+			-- root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
+			-- dynamic_command = cmd_resolver.from_node_modules(),
+			sources = {
+				-- Lua
+				formatting.stylua,
+				-- Js
+				-- diagnostics.eslint_d,
+        require("none-ls.diagnostics.eslint_d"),
+				formatting.prettierd,
+				-- formatting.prettier,
+				-- Python
+				formatting.black,
+				formatting.isort,
+				-- Golang
+				formatting.goimports,
+			},
+		})
+
+		vim.keymap.set("n", "<leader>fr", vim.lsp.buf.format, {})
+	end,
 }

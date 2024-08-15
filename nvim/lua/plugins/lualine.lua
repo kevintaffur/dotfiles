@@ -6,8 +6,8 @@ return {
   },
   opts = {
     options = {
-      theme = "gruvbox"
-      -- theme = "github_light"
+      -- theme = "gruvbox"
+      theme = "github_light"
     }
   }
 }
