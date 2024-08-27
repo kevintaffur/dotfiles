@@ -3,6 +3,8 @@ return {
   priority = 1000,
   config = function()
     require("gruvbox").setup({
+      terminal_colors = true,
+      -- transparent_mode = true,
       contrast = "hard",
       overrides = {
         SignColumn = {
@@ -29,5 +31,17 @@ return {
     vim.o.background = "dark"
     vim.cmd.colorscheme "gruvbox"
     vim.cmd "hi CursorLineNr gui=bold"
+
+    vim.cmd([[
+      highlight Normal guibg=NONE ctermbg=NONE
+      highlight NonText guibg=NONE ctermbg=NONE
+      highlight LineNr guibg=NONE ctermbg=NONE
+      highlight Folded guibg=NONE ctermbg=NONE
+      highlight EndOfBuffer guibg=NONE ctermbg=NONE
+      highlight SignColumn guibg=NONE ctermbg=NONE
+      highlight StatusLine guibg=NONE ctermbg=NONE
+      highlight StatusLineNC guibg=NONE ctermbg=NONE
+    ]])
+
   end
 }

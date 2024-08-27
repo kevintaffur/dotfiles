@@ -20,5 +20,7 @@ vim.cmd "set guicursor="
 
 vim.opt.swapfile = false
 
+-- vim.o.termguicolors = true
+
 vim.keymap.set("i", "kj", "<Esc>", {})
 vim.keymap.set("n", "<leader>l", ":set nu! relativenumber!<CR>")

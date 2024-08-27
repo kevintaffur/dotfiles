@@ -8,7 +8,7 @@ return {
     options = {
       -- theme = "gruvbox"
       -- theme = "github_light"
-      theme = "everforest"
+      theme = "rose-pine"
     }
   }
 }
