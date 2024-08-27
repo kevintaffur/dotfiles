@@ -1,50 +1,84 @@
+# Using wls
+shell = "ubuntu"
+
 [font]
-normal = { family = "ZedMono Nerd Font", style = "Extended Bold" }
-bold = { family = "ZedMono Nerd Font", style = "Extended Bold" }
-italic = { family = "ZedMono Nerd Font", style = "Extended Bold" }
-bold_italic = { family = "ZedMono Nerd Font", style = "Extended Bold" }
+normal = { family = "JetBrainsMonoNL Nerd Font", style = "Medium" }
+bold = { family = "JetBrainsMonoNL Nerd Font", style = "Medium" }
+italic = { family = "JetBrainsMonoNL Nerd Font", style = "Medium" }
+bold_italic = { family = "JetBrainsMonoNL Nerd Font", style = "Medium" }
 size = 10.2
 
 [env]
-term = "xterm-256color"
+TERM = "xterm-256color"
 
-[window]
-opacity = 1
-#blur = true
-
-# Default colors
 [colors.primary]
-background = '#232a2e'
-foreground = '#d3c6aa'
+foreground = "#e0def4"
+background = "#191724"
+dim_foreground = "#908caa"
+bright_foreground = "#e0def4"
 
-# Cursor colors
-# [colors.cursor]
-# cursor = '#d3c6aa'
-# text = '#d3c6aa'
+[colors.cursor]
+text = "#e0def4"
+cursor = "#524f67"
 
-# Normal colors
+[colors.vi_mode_cursor]
+text = "#e0def4"
+cursor = "#524f67"
+
+[colors.search.matches]
+foreground = "#908caa"
+background = "#26233a"
+
+[colors.search.focused_match]
+foreground = "#191724"
+background = "#ebbcba"
+
+[colors.hints.start]
+foreground = "#908caa"
+background = "#1f1d2e"
+
+[colors.hints.end]
+foreground = "#6e6a86"
+background = "#1f1d2e"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#e0def4"
+background = "#1f1d2e"
+
+[colors.selection]
+text = "#e0def4"
+background = "#403d52"
+
 [colors.normal]
-black = '#7a8478'
-blue = '#7fbbb3'
-cyan = '#83c092'
-green = '#a7c080'
-magenta = '#d699b6'
-red = '#e67e80'
-white = '#d3c6aa'
-yellow = '#dbbc7f'
+black = "#26233a"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
 
-# Bright colors
 [colors.bright]
-black = '#7a8478'
-blue = '#7fbbb3'
-cyan = '#83c092'
-green = '#a7c080'
-magenta = '#d699b6'
-red = '#e67e80'
-white = '#d3c6aa'
-yellow = '#dbbc7f'
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
 
-# Selection colors
-#[colors.selection]
-#background = '#dae9f9'
-#text = '#000000'
+[colors.dim]
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
