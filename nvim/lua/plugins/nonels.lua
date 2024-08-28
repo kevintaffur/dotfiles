@@ -1,8 +1,8 @@
 return {
 	"nvimtools/none-ls.nvim",
-  dependencies = {
-    "nvimtools/none-ls-extras.nvim",
-  },
+	dependencies = {
+		"nvimtools/none-ls-extras.nvim",
+	},
 	config = function()
 		local null_ls = require("null-ls")
 
@@ -20,12 +20,14 @@ return {
 				formatting.stylua,
 				-- Js
 				-- diagnostics.eslint_d,
-        require("none-ls.diagnostics.eslint_d"),
+				require("none-ls.diagnostics.eslint_d"),
 				formatting.prettierd,
 				-- formatting.prettier,
 				-- Python
+				-- require("none-ls.diagnostics.djlint"),
 				formatting.black,
 				formatting.isort,
+				formatting.djlint,
 				-- Golang
 				formatting.goimports,
 			},
